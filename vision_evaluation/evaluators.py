@@ -507,3 +507,7 @@ class MeanAveragePrecisionEvaluatorForMultipleIOUs(EvaluatorAggregator):
         assert len(ious) == len(report_tag_wise)
         evaluators = [MeanAveragePrecisionEvaluatorForSingleIOU(ious[i], report_tag_wise[i]) for i in range(len(ious))]
         super(MeanAveragePrecisionEvaluatorForMultipleIOUs, self).__init__(evaluators)
+
+
+class CaptionEvaluator(Evaluator):
+    pass
